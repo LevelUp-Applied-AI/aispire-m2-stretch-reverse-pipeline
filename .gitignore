@@ -1,0 +1,15 @@
+# Secrets and credentials
+.env
+*.key
+*.pem
+.venv/
+
+# Data files (never commit raw data to Git)
+*.csv
+*.parquet
+*.xlsx
+data/raw/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

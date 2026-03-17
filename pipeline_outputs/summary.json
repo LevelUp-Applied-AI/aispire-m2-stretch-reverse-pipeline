@@ -1,0 +1,55 @@
+{
+  "row_count": 1960,
+  "date_min": "2024-01-01",
+  "date_max": "2024-12-31",
+  "route_count": 12,
+  "routes": [
+    "R101",
+    "R102",
+    "R103",
+    "R104",
+    "R105",
+    "R112",
+    "R205",
+    "R206",
+    "R207",
+    "R208",
+    "R301",
+    "R302"
+  ],
+  "direction_counts": {
+    "Outbound": 1018,
+    "Inbound": 942
+  },
+  "vehicle_type_counts": {
+    "Standard Bus": 669,
+    "Minibus": 659,
+    "Articulated Bus": 632
+  },
+  "weather_counts": {
+    "Overcast": 508,
+    "Rain": 504,
+    "Clear": 489,
+    "Snow": 459
+  },
+  "holiday_counts": {
+    "False": 1902,
+    "True": 58
+  },
+  "boarding_total": 805903.0,
+  "alighting_total": 746114.0,
+  "trip_duration_mean": 52.27635204081632,
+  "temperature_mean": 14.096785714285714,
+  "missing_after_cleaning": {
+    "date": 0,
+    "route_id": 0,
+    "direction": 0,
+    "boarding_count": 0,
+    "alighting_count": 0,
+    "vehicle_type": 0,
+    "trip_duration_min": 0,
+    "weather": 0,
+    "temperature_c": 0,
+    "is_holiday": 0
+  }
+}
