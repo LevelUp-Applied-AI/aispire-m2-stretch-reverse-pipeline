@@ -1,0 +1,39 @@
+{
+  "total_trips": 1757,
+  "date_range": "2024-01-01 to 2024-12-31",
+  "busiest_route": "R105",
+  "avg_daily_ridership": 1843.9,
+  "ridership_by_vehicle_type": {
+    "Articulated Bus": 213235,
+    "Minibus": 235096,
+    "Standard Bus": 221003
+  },
+  "ridership_by_weather": {
+    "Clear": 156924,
+    "Overcast": 177505,
+    "Rain": 176155,
+    "Snow": 158750
+  },
+  "top_5_routes_by_boarding": [
+    {
+      "route": "R105",
+      "total_boardings": 67189
+    },
+    {
+      "route": "R208",
+      "total_boardings": 65984
+    },
+    {
+      "route": "R206",
+      "total_boardings": 64158
+    },
+    {
+      "route": "R205",
+      "total_boardings": 60929
+    },
+    {
+      "route": "R104",
+      "total_boardings": 60926
+    }
+  ]
+}
