@@ -1,0 +1,24 @@
+{
+    "total_rows": 1947,
+    "total_boarding": 744765,
+    "total_alighting": 709243,
+    "average_trip_duration": 56.58,
+    "average_temperature": 14.03,
+    "vehicle_types": {
+        "Minibus": 648,
+        "Standard Bus": 647,
+        "Articulated Bus": 618,
+        "Std Bus": 17,
+        "Articulated": 9,
+        "Mini Bus": 8
+    },
+    "direction_counts": {
+        "Outbound": 994,
+        "Inbound": 906,
+        "In": 20,
+        "Outbnd": 11,
+        "Out": 9,
+        "Inbnd": 7
+    },
+    "holiday_counts": 58
+}
