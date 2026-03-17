@@ -1,45 +1,90 @@
-# Stretch 2: Reverse-Engineer the Pipeline
+# Stretch 2 — Reverse-Engineered Transit Data Pipeline
 
-**This assignment is optional and ungraded.** It is designed for learners who want additional practice with data cleaning and analysis pipelines.
+This project builds a complete data pipeline to clean and analyze a messy public transit ridership dataset and reproduce expected outputs.
 
-## The Task
+## Objective
+Given:
+- A messy dataset (`data/transit_ridership.csv`)
+- Expected outputs (`expected_output/`)
 
-You have two things:
-
-1. **Raw data** (`data/transit_ridership.csv`) — a messy public transit ridership dataset with inconsistent date formats, typos, missing values, duplicates, and invalid entries.
-2. **Expected outputs** (`expected_output/`) — the cleaned summary statistics (`summary.json`) and four charts (PNGs) that a correct pipeline produces from this raw data.
-
-Your job: **write the pipeline that transforms the raw data into these expected outputs.**
-
-## What to Build
-
-Write a Python script (or notebook) that:
-
-1. Loads the raw CSV
-2. Cleans and standardizes the data (dates, categories, missing values, duplicates, invalid entries)
-3. Produces a `summary.json` matching the structure and values in `expected_output/summary.json`
-4. Produces four charts that match the expected PNGs
-
-## How to Validate
-
-Compare your outputs against the expected ones:
-
-- **summary.json** — diff your output against the expected file. Values should match exactly.
-- **Charts** — visual comparison. Your charts should show the same data patterns and structure; exact styling differences are fine.
-
-## Hints
-
-The raw data has multiple categories of messiness. Before writing any transformation code, explore the dataset and catalog every issue you find. The expected outputs will tell you what "clean" looks like — work backward from there.
-
-## Dataset Details
-
-- ~2000 rows of bus route ridership data covering January–December 2024
-- 10 columns: `date`, `route_id`, `direction`, `boarding_count`, `alighting_count`, `vehicle_type`, `trip_duration_min`, `weather`, `temperature_c`, `is_holiday`
+The goal is to:
+- Clean and standardize the data
+- Generate accurate summary statistics
+- Produce visualizations that match expected results
 
 ---
 
-## License
+## Pipeline Steps
 
-This repository is provided for educational use only. See [LICENSE](LICENSE) for terms.
+### 1. Load Data
+- Read CSV using pandas
 
-You may clone and modify this repository for personal learning and practice, and reference code you wrote here in your professional portfolio. Redistribution outside this course is not permitted.
+### 2. Clean Data
+- Remove duplicates
+- Standardize text fields (route_id, direction, vehicle_type, weather)
+- Fix inconsistent categories and typos
+- Parse mixed date formats
+- Convert numeric columns safely
+
+### 3. Handle Missing Values
+- Fill:
+  - `alighting_count`
+  - `trip_duration_min`
+  - `temperature_c`
+- Fill `boarding_count` using:
+  - median per `route_id`
+  - fallback to global median
+
+### 4. Filter Invalid Data
+- Keep only valid routes
+- Remove negative values
+- Ensure valid categories
+
+### 5. Generate Summary
+- Total trips
+- Date range
+- Busiest route
+- Average daily ridership
+- Ridership by vehicle type
+- Ridership by weather
+- Top 5 routes
+
+### 6. Create Visualizations
+- Monthly ridership trend
+- Ridership by route
+- Vehicle utilization
+- Weather impact
+
+---
+
+## How to Run
+
+Activate virtual environment:
+
+```bash
+source .venv/Scripts/activate
+```
+
+Run pipeline:
+```bash
+python pipeline.py
+```
+
+Optional:
+1. explore_data.py
+Helps you:
+    understand messy data and find bugs faster
+
+2. compare_outputs.py
+Helps you:
+    check differences between your summary and expected summary
+```bash
+python explore_data.py
+python compare_outputs.py
+```
+
+## Output
+    Results are saved in:
+    output/
+    summary.json
+    4 visualization charts (PNG)
