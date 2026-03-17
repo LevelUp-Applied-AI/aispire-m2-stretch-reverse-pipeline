@@ -14,9 +14,6 @@ The goal is to:
 
 ---
 
-
----
-
 ## Pipeline Steps
 
 ### 1. Load Data
