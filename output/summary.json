@@ -1,0 +1,39 @@
+{
+    "total_trips": 1931,
+    "date_range": "2024-01-01 to 2024-12-31",
+    "busiest_route": "R302",
+    "avg_daily_ridership": 2178.9,
+    "ridership_by_vehicle_type": {
+        "Articulated Bus": 255375.5,
+        "Minibus": 272736.5,
+        "Standard Bus": 265007.5
+    },
+    "ridership_by_weather": {
+        "Clear": 196403.0,
+        "Overcast": 205571.5,
+        "Rain": 205523.5,
+        "Snow": 185621.5
+    },
+    "top_5_routes_by_boarding": [
+        {
+            "route": "R302",
+            "total_boardings": 77840
+        },
+        {
+            "route": "R206",
+            "total_boardings": 77740
+        },
+        {
+            "route": "R105",
+            "total_boardings": 77410
+        },
+        {
+            "route": "R208",
+            "total_boardings": 75190
+        },
+        {
+            "route": "R205",
+            "total_boardings": 73985
+        }
+    ]
+}
